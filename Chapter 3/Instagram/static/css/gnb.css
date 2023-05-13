@@ -1,0 +1,40 @@
+.myshadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.gnb-content {
+  width: 1000px;
+  height: 60px;
+  padding: 5px;
+}
+
+.search-box {
+  background-color: #efefef;
+  width: 268px;
+  height: 36px;
+  border-radius: 8px;
+  margin-right: auto;
+}
+.logo {
+  margin-right: auto;
+}
+.search-box > img {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.search-box > input {
+  border: none;
+  background-color: #efefef;
+}
+.search-box > input {
+  border: none;
+  background-color: #efefef;
+  border: 0;
+  outline: 0;
+}
+.search-box >input:focus {
+  outline: none !important;
+}
+.icon>img{
+    margin-left:17px ;
+    width: 24px;
+}

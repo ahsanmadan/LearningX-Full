@@ -1,0 +1,83 @@
+.gnb {
+  background: linear-gradient(-180deg, #ee4d2d, #ff7337);
+  padding-bottom: 12px;
+  color: white;
+}
+.left {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  align-items: center;
+  margin-right: auto;
+}
+
+.left > li,
+.left > i {
+  margin: 3px;
+}
+
+.top {
+  margin: auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.right > li,
+.right > i {
+  margin: 3px;
+}
+
+.bottom {
+  margin: auto;
+  margin-top: 10px;
+  width: 1200px;
+}
+.search-input {
+  width: 850px;
+  height: 40px;
+  background-color: white;
+}
+
+.search-input > input {
+  width: 90%;
+  height: 35px;
+  margin-right: auto;
+  border: none;
+  border-radius: 2px;
+}
+
+.search-input > button {
+  background-color: #ff7337;
+  color: white;
+  width: 60px;
+  height: 35px;
+  margin: 3px;
+  border: none;
+  border-radius: 2px;
+}
+
+.tags {
+  margin-top: 5px;
+  width: 845px;
+}
+
+.tags > li {
+  margin-right: 9px;
+}
+
+.cart {
+  font-size: 25px;
+  margin-left: 50px;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,43 @@
+.banners {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+.left-banners {
+  margin-right: 5px;
+}
+.left-banners > img {
+  border-radius: 2px;
+}
+.right-banners > img {
+  width: 400px;
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+.bottom-banners {
+  width: 1200px;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.bottom-banners > li {
+  width: 100px;
+  text-align: center;
+  height: 80px;
+}
+.bottom-banners > li:hover > img {
+  width: 48px;
+  margin-bottom: 6px;
+}
+.bottom-banners > li > img {
+  width: 45px;
+  margin-bottom: 5px;
+}
+.bottom-banners > li > span {
+  font-size: 12px;
+  width: 90px;
+  overflow: visible;
+  margin-bottom: auto;
+}
+

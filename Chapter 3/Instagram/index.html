@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <link rel="stylesheet" href="static/css/gnb.css" />
+    <link rel="stylesheet" href="static/css/default.css" />
+    <link rel="shortcut icon" href="static/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/feed and suggest.css" />
+    <!-- corousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <style>
+    .swiper {
+      width: 470px;
+      height: 585px;
+    }
+    .swiper-slide > img {
+      width: 470px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next:after {
+      font-size: 12px;
+      color: white;
+      font-weight: bold;
+    }
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+  </style>
+  <script>
+    let is_liked = true;
+    function like() {
+      if (is_liked == true) {
+        $("#heart").attr("src", "static/icons/12.png");
+        is_liked = false;
+      } else {
+        $("#heart").attr("src", "static/icons/5.png");
+        is_liked = true;
+      }
+    }
+  </script>
+  <body>
+    <div class="gnb myshadow flex-row">
+      <div class="gnb-content d-flex flex-row">
+        <div class="logo flex-row">
+          <img
+            src="static/logo_instagram.png"
+            alt=""
+            width="103px"
+            height="29px"
+          /><i class="ms-1 bi bi-chevron-down"></i>
+        </div>
+        <div class="search-box flex-row">
+          <img src="static/icons/11.png" alt="" />
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="icon flex-row">
+          <img src="static/icons/1.png" alt="" />
+          <img src="static/icons/2.png" alt="" />
+          <img src="static/icons/3.png" alt="" />
+          <img src="static/icons/4.png" alt="" />
+          <img src="static/icons/5.png" alt="" />
+          <img src="static/icons/6.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main flex-row">
+      <div class="feed flex-col">
+        <div class="profile flex-row">
+          <div class="img-warp">
+            <img width="40" src="static/follower/img-1.jpg" alt="" />
+          </div>
+          <p class="flex-col">
+            <span>acanramdan</span>
+            <span>Pohon angker</span>
+          </p>
+          <img width="20px" src="static/icons/7.png" alt="" />
+        </div>
+        <div class="imgs swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="static/post/me1 (1).jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="static/post/me1 (2).jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="static/post/me1 (3).jpeg" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="static/post/me1 (4).jpeg" alt="" />
+            </div>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="icons flex-row">
+          <img id="heart" onclick="like()" src="static/icons/5.png" alt="" />
+          <img src="static/icons/9.png" alt="" />
+          <img src="static/icons/2.png" alt="" />
+          <img src="static/icons/10.png" alt="" />
+        </div>
+        <div class="likes">20,061,007 Likes</div>
+        <div class="comments">
+          <span class="title">acanramdan</span>
+          <span>freindship. </span
+          ><span class="hastag">
+            #SpartaCodingClub #CloneCoding #Instagram #LearningX</span
+          >
+        </div>
+        <div class="count">View all 20,060,822</div>
+        <div class="time">12 hours ago</div>
+      </div>
+
+      <div class="account flex-col">
+        <div class="account-content">
+          <li class="flex-row">
+            <div class="img-warp">
+              <img width="56" src="static/icons/6.png" alt="" />
+            </div>
+            <p class="flex-col">
+              <span>ahsanramdan</span>
+              <span>ahsan</span>
+            </p>
+            <a style="text-decoration: none" href="">Switch</a>
+          </li>
+
+          <li class="flex-row suggestion">
+            <span>Suggestions for you</span>
+            <a href="#" style="text-decoration: none">See All</a>
+          </li>
+
+          <li class="flex-row freinds">
+            <div class="img-warp">
+              <img width="32" src="static/follower/img-1.jpg" alt="" />
+            </div>
+            <p class="flex-col first">
+              <span>acanramdan</span>
+              <span>.</span>
+            </p>
+            <a style="text-decoration: none" href="">Follow</a>
+          </li>
+
+          <li class="flex-row freinds">
+            <div class="img-warp">
+              <img width="32" src="static/follower/img-2.jpg" alt="" />
+            </div>
+            <p class="flex-col">
+              <span>what.j0e</span>
+              <span>D1kka</span>
+            </p>
+            <a style="text-decoration: none" href="">Follow</a>
+          </li>
+
+          <li class="flex-row freinds">
+            <div class="img-warp">
+              <img width="32" src="static/follower/img-4.jpg" alt="" />
+            </div>
+            <p class="flex-col">
+              <span>muhammadrevly</span>
+              <span></span>
+            </p>
+            <a style="text-decoration: none" href="">Follow</a>
+          </li>
+
+          <li class="flex-row freinds">
+            <div class="img-warp">
+              <img width="32" src="static/follower/img-3.jpg" alt="" />
+            </div>
+            <p class="flex-col">
+              <span>bimaalfdza</span>
+              <span>Alfadza</span>
+            </p>
+            <a style="text-decoration: none" href="">Follow</a>
+          </li>
+
+          <li class="flex-row freinds">
+            <div class="img-warp">
+              <img width="32" src="static/follower/img-5.jpg" alt="" />
+            </div>
+            <p class="flex-col">
+              <span>nayaacldyaa</span>
+              <span>nayaaaa</span>
+            </p>
+            <a style="text-decoration: none" href="">Follow</a>
+          </li>
+        </div>
+
+        <div class="about">
+          <a href="">About</a>
+          <a href="">Help</a>
+          <a href="">Press</a>
+          <a href="">API</a>
+          <a href="">Jobs</a>
+          <a href="">Privacy</a>
+          <a href="">Terms</a>
+          <a href="">Locations</a>
+          <a href="">Language</a>
+          <a href="">English</a>
+        </div>
+
+        <div class="name">&copy; 2023 INSTAGRAM FROM META</div>
+      </div>
+    </div>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: false,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>
