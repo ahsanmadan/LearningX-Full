@@ -11,40 +11,136 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-    <script src="script/my.js"></script>
   </head>
   <style>
     @import url(css/default.css);
     @import url(css/gnb.css);
     @import url(css/main.css);
     @import url(css/modal.css);
+    .account-modal {
+      background-color: white;
+      position: fixed;
+      top: 60px;
+      right: 10px;
+      width: 360px;
+      box-shadow: 0px 0px 10px 0px lightgray;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      display: none;
+    }
+    .account-info{
+      width: 331px;
+      box-shadow: 0px 0px 10px 0px lightgray;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .account-profile > div{
+      width: 36px;
+      height: 36px;
+      border-radius:50% ;
+      overflow: hidden;
+      border: 1px solid #f2f2f2;
+      margin-right: 8px;
+    }
+    .account-profile > span{
+      margin-right: auto;
+      
+    }
+    .account-profile{
+      width: 100%;
+      border-radius: 8px;
+    }
+    .account-profile:hover{
+      background-color: #f2f2f2;
+    }
+    .account-info > div:last-child{
+      color: #1876f2;
+      align-items: flex-start;
+      height: 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .account-info > div{
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    .account-info > div:hover{
+      background-color: #f2f2f2;
+    }
+    .account-modal > li{
+      width: 344px;
+      height: 52px;
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .account-modal > li:hover{
+      background-color: #f2f2f2;
+      
+    }
+    .account-modal > li > div{
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      background-color: #e4e6eb;
+    }
+    .account-modal > li:hover > img{
+      filter: brightness(0.95s);
+    }
+    .account-modal > li > div > img {
+      border-radius: 100%;
+    }
+    .account-modal > li > span{
+      font-size: 14px;
+      margin-left: 10px;
+      margin-right: auto;
+    }
+    .account-modal > li > img {
+      width: 24px;
+      height: 24px;
+      background-color: #f2f2f2;
+    }
   </style>
   <script>
     function showIcon() {
-    $("#search-icon").show();
-  }
-  function hideIcon() {
-    $("#search-icon").hide();
-  }
-  function showButton() {
-    $("#btn-post").show();
-  }
-  function post() {
-    alert("Posting complete!");
-    $("#btn-post").hide();
-  }
-  let count = 0;
-  function Modal(){
-    count += 1;
-    if (count % 2 == 1){
-      $("#menu-modal").show();
-      $("#gnb-menu").attr("src","image/gnb/10.png");
-    }else if(count % 2 == 0){
-      $("#menu-modal").hide();
-      $("#gnb-menu").attr("src","image/gnb/6.png");
-
+      $("#search-icon").show();
     }
-  }
+    function hideIcon() {
+      $("#search-icon").hide();
+    }
+    function showButton() {
+      $("#btn-post").show();
+    }
+    function post() {
+      alert("Posting complete!");
+      $("#btn-post").hide();
+    }
+    let count = 0;
+    function Modal() {
+      count += 1;
+      if (count % 2 == 1) {
+        $("#menu-modal").show();
+        $("#gnb-menu").attr("src", "image/gnb/10.png");
+      } else if (count % 2 == 0) {
+        $("#menu-modal").hide();
+        $("#gnb-menu").attr("src", "image/gnb/6.png");
+      }
+    }
+
+    let count1 = 0;
+    function Modal1() {
+      count1 += 1;
+      if (count1 % 2 == 1) {
+        $("#account-modal").show();
+      } else if (count1 % 2 == 0) {
+        $("#account-modal").hide();
+      }
+    }
   </script>
   <body>
     <!-- awal gnb -->
@@ -90,8 +186,8 @@
         <div class="nav-tab-right flex-row">
           <img src="image/gnb/8.png" alt="" />
         </div>
-        <div class="nav-tab-right flex-row">
-          <img src="image/gnb/9.png" alt="" />
+        <div  class="nav-tab-right flex-row">
+          <img onclick="Modal1()" src="image/gnb/9.png" alt="" />
         </div>
       </div>
     </div>
@@ -296,7 +392,9 @@
             <img width="36" src="image/modal/4.png" alt="" />
             <div class="flex-col">
               <span>News feed</span>
-              <span>See relevant post from people and pages that you follow</span>
+              <span
+                >See relevant post from people and pages that you follow</span
+              >
             </div>
           </li>
           <li class="flex-row">
@@ -308,7 +406,7 @@
           </li>
         </div>
         <div class="modal-create">
-          <span style="display: block;">Create</span>
+          <span style="display: block">Create</span>
           <li class="flex-row">
             <div class="flex-row">
               <img width="22" src="image/modal/6.png" alt="" />
@@ -354,6 +452,51 @@
           </li>
         </div>
       </div>
+    </div>
+    <div class="account-modal" id="account-modal">
+      <div class="account-info flex-col">
+        <div class="account-profile flex-row">
+          <div class="flex-row">
+            <img width="36" src="image/gnb/9.png" alt="" />
+          </div>
+          <span>Ahsan Ramadan</span>
+        </div>
+        <hr style="width: 100%;"/>
+        <div>See all profile</div>
+      </div>
+      <li class="flex-row">
+        <div class="flex-row">
+          <img width="24" src="image/modal/13.png" alt="" />
+        </div>
+        <span>Settings & privacy</span>
+        <img src="image/modal/18.png" alt="">
+      </li>
+      <li class="flex-row">
+        <div class="flex-row">
+          <img width="24" src="image/modal/14.png" alt="" />
+        </div>
+        <span>Help & support</span>
+        <img src="image/modal/18.png" alt="">
+      </li>
+      <li class="flex-row">
+        <div class="flex-row">
+          <img width="24" src="image/modal/15.png" alt="" />
+        </div>
+        <span>Display & accessibility</span>
+        <img src="image/modal/18.png" alt="">
+      </li>
+      <li class="flex-row">
+        <div class="flex-row">
+          <img width="24" src="image/modal/16.png" alt="" />
+        </div>
+        <span>Give feedback</span>
+      </li>
+      <li class="flex-row">
+        <div class="flex-row">
+          <img width="24" src="image/modal/17.png" alt="" />
+        </div>
+        <span>Log Out</span>
+      </li>
     </div>
     <!-- akhir modal -->
   </body>
