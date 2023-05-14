@@ -126,3 +126,89 @@
 .menu-white {
   background-image: url(image/gnb/6.png);
 }
+.account-modal {
+  background-color: white;
+  position: fixed;
+  top: 60px;
+  right: 10px;
+  width: 360px;
+  box-shadow: 0px 0px 10px 0px lightgray;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: none;
+}
+.account-info {
+  width: 331px;
+  box-shadow: 0px 0px 10px 0px lightgray;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.account-profile > div {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #f2f2f2;
+  margin-right: 8px;
+}
+.account-profile > span {
+  margin-right: auto;
+}
+.account-profile {
+  width: 100%;
+  border-radius: 8px;
+}
+.account-profile:hover {
+  background-color: #f2f2f2;
+}
+.account-info > div:last-child {
+  color: #1876f2;
+  align-items: flex-start;
+  height: 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.account-info > div {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.account-info > div:hover {
+  background-color: #f2f2f2;
+}
+.account-modal > li {
+  width: 344px;
+  height: 52px;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.account-modal > li:hover {
+  background-color: #f2f2f2;
+}
+.account-modal > li > div {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #e4e6eb;
+}
+.account-modal > li:hover > img {
+  filter: brightness(0.95s);
+}
+.account-modal > li > div > img {
+  border-radius: 100%;
+}
+.account-modal > li > span {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: auto;
+}
+.account-modal > li > img {
+  width: 24px;
+  height: 24px;
+  background-color: #f2f2f2;
+}
