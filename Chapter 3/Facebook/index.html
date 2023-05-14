@@ -11,235 +11,44 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
+    <script src="script/my.js"></script>
   </head>
   <style>
     @import url(css/default.css);
     @import url(css/gnb.css);
-
-    .main-left {
-      width: 360px;
-    }
-    .main {
-      align-items: flex-start;
-      padding-top: 20px;
-      padding-bottom: 40px;
-      background-color: #f2f2f2;
-    }
-    .main-middle {
-      margin-right: auto;
-      margin-left: 50px;
-    }
-    .main-left {
-      margin-left: 5px;
-    }
-    .main-left > li {
-      list-style: none;
-      width: 286px;
-      height: 44px;
-      border-radius: 8px;
-      padding-left: 15px;
-      cursor: pointer;
-    }
-    .main-left > li:hover {
-      background-color: lightgray;
-    }
-    .main-left > li > span {
-      margin-right: auto;
-      margin-left: 10px;
-      font-size: 15px;
-    }
-    .main-left > li > div {
-      border-radius: 50%;
-      overflow: hidden;
-      width: 28px;
-      height: 28px;
-    }
-    .main-left > li > img {
-      width: 28px;
-    }
-    hr {
-      border: none;
-      border-top: 0.1px solid #d2d2d2;
-    }
-
-    .main-middle {
-      width: 700px;
-      height: 500px;
-    }
-    .main-middle > .story {
-      background-color: white;
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0px 0px 5px 0px lightgray;
-    }
-    .main-middle > .create {
-      background-color: white;
-      border-radius: 6px;
-      width: 100%;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0px 0px 5px 0px lightgray;
-    }
-    .main-middle > .feed {
-      background-color: white;
-      height: 560px;
-      border-radius: 6px;
-      width: 100%;
-      box-shadow: 0px 0px 5px 0px lightgray;
-    }
-    .story-top{
-      height: 60px;
-      border-bottom: 2px solid #f2f2f2;
-    }
-    .story-top > div{
-      width: 200px;
-      margin-right: 5px;
-      font-size: 15px;
-      font-weight: 600;
-      color: gray;
-      height: 50px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .story-top > div:hover{
-      background-color: #f2f2f2;
-      
-    }
-    .story-top > div:first-child{
-      color: blue;
-      border-bottom: 3px solid blue;
-      border-radius: 5px 5px 0px 0px;
-    }
-    .desc > li {
-      list-style: none;
-    }
-    .story-bottom{
-      padding: 15px;
-    }
-    .profile{
-      width: 115px;
-      height: 200px;
-      overflow: hidden;
-      border-radius: 8px;
-      border: 0.5px solid #f2f2f2;
-      box-shadow: 0px 0px 5px 0px lightgray;
-      position: relative;
-    }
-    .profile > span {
-      font-weight: bold;
-      font-size: 13px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    .desc{
-      margin-left: 20px;
-      margin-right: auto;
-      align-items: flex-start;
-    }
-    .desc > li {
-      margin-bottom: 15px;
-      font-size: 13px;
-    }
-    .desc > li > img{
-      margin-right: 10px;
-    }
-    .plus{
-      width: 30px;
-      height:30px;
-      background-color: blue;
-      border-radius: 50%;
-      border: 4px solid white;
-      position: absolute;
-      top: 141px;
-    }
-    .profile-img{
-      background:linear-gradient(to bottom, transparent ,gray),url(image/feed/me1\ \(2\).jpeg);
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-    }
-    .create{
-      padding: 15px;
-      box-sizing: border-box;
-    }
-
-    .create-profile{
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 0.5px solid #f2f2f2;
-      margin-right: auto;
-    }
-    .create-top{
-      border-bottom: 2px solid #f2f2f2da;
-      padding-bottom: 10px;
-    }
-    .create-top > input {
-      background-color: #f2f2f2;
-      border-radius: 40px;
-      width: 618px;
-      height: 40px;
-      margin-left: 5px;
-      border: none;
-      outline: none;
-      padding:5px ;
-      box-sizing: border-box;
-      text-indent: 10px;
-    }
-    .create-bottom > li {
-      width: 220px;
-      height: 42px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 5px;
-    }
-
-    .create-bottom > li:hover{
-      background-color: #f2f2f2;
-    }
-    .create-bottom > li > span {
-      margin-left: 5px;
-      font: 14px;
-      color: grey;
-    }
-
-    .create > button {
-      width: 100%;
-      border-radius: 8px;
-      background-color: blue;
-      color: white;
-      font-size: 14px;
-      font-weight: bold;
-      height: 40px;
-      margin-top: 10px;
-      border: none;
-      cursor: pointer;  
-      display: none;
-    }
-
-    .create > button:hover{
-      background-color: darkblue;
-    }
+    @import url(css/main.css);
+    @import url(css/modal.css);
   </style>
   <script>
     function showIcon() {
-      $("#search-icon").show();
+    $("#search-icon").show();
+  }
+  function hideIcon() {
+    $("#search-icon").hide();
+  }
+  function showButton() {
+    $("#btn-post").show();
+  }
+  function post() {
+    alert("Posting complete!");
+    $("#btn-post").hide();
+  }
+  let count = 0;
+  function Modal(){
+    count += 1;
+    if (count % 2 == 1){
+      $("#menu-modal").show();
+      $("#gnb-menu").attr("src","image/gnb/10.png");
+    }else if(count % 2 == 0){
+      $("#menu-modal").hide();
+      $("#gnb-menu").attr("src","image/gnb/6.png");
+
     }
-    function hideIcon() {
-      $("#search-icon").hide();
-    }
-    function showButton() {
-      $("#btn-post").show();
-    }
-    function post() {
-      alert("Posting complete!")
-      $("#btn-post").hide();
-    }
+  }
   </script>
   <body>
-    <div class="gnb flex-row">
+    <!-- awal gnb -->
+    <div class="gnb flex-row sticky-gnb">
       <div class="gnb-left flex-row">
         <img width="40" src="image/logo.png" alt="" />
         <div class="search-box flex-row">
@@ -272,8 +81,8 @@
       </div>
 
       <div class="gnb-right flex-row">
-        <div class="nav-tab-right flex-row">
-          <img src="image/gnb/6.png" alt="" />
+        <div onclick="Modal()" class="nav-tab-right flex-row">
+          <img id="gnb-menu" src="image/gnb/6.png" alt="" />
         </div>
         <div class="nav-tab-right flex-row">
           <img src="image/gnb/7.png" alt="" />
@@ -286,7 +95,8 @@
         </div>
       </div>
     </div>
-
+    <!-- akhir gnb -->
+    <!-- awal main -->
     <div class="main flex-row">
       <div class="main-left">
         <li class="flex-row">
@@ -341,7 +151,7 @@
 
         <hr />
       </div>
-      <div class="main-middle flex-col">
+      <div class="main-middle">
         <div class="story">
           <div class="story-top flex-row">
             <div class="flex-row">Stories</div>
@@ -353,53 +163,198 @@
               <div class="profile-img"></div>
               <span>Create Story</span>
               <div class="plus flex-row">
-                <img src="image/feed/12.png" alt="">
+                <img src="image/feed/12.png" alt="" />
               </div>
             </div>
 
             <div class="desc flex-col">
               <li class="flex-row">
-                <img src="image/feed/13.png" alt="">
-               <span>Share everyday moments with friends and family.</span> 
+                <img src="image/feed/13.png" alt="" />
+                <span>Share everyday moments with friends and family.</span>
               </li>
               <li class="flex-row">
-                <img src="image/feed/14.png" alt="">
-               <span>Stories disappear after 24 hours.</span> 
+                <img src="image/feed/14.png" alt="" />
+                <span>Stories disappear after 24 hours.</span>
               </li>
               <li class="flex-row">
-                <img src="image/feed/15.png" alt="">
-               <span>Replies and reactions are private.</span>
+                <img src="image/feed/15.png" alt="" />
+                <span>Replies and reactions are private.</span>
               </li>
             </div>
-
-
           </div>
         </div>
         <div class="create flex-col">
           <div class="create-top flex-row">
             <div class="create-profile">
-              <img src="image/feed/1.png" alt="">
+              <img src="image/feed/1.png" alt="" />
             </div>
-            <input id="value" onfocus="showButton()" type="text" placeholder="What's on your mind?">
+            <input
+              id="value"
+              onfocus="showButton()"
+              type="text"
+              placeholder="What's on your mind?"
+            />
           </div>
           <div class="create-bottom flex-row">
             <li class="flex-row">
-              <img src="image/feed/16.png" alt="">
+              <img src="image/feed/16.png" alt="" />
               <span>Live video</span>
             </li>
             <li class="flex-row">
-              <img src="image/feed/17.png" alt="">
+              <img src="image/feed/17.png" alt="" />
               <span>Photo/video</span>
             </li>
             <li class="flex-row">
-              <img src="image/feed/18.png" alt="">
+              <img src="image/feed/18.png" alt="" />
               <span>Feeling/activity</span>
             </li>
           </div>
           <button onclick="post()" id="btn-post">Let's post it</button>
         </div>
-        <div class="feed"></div>
+        <div class="feed flex-col">
+          <div class="feed-top flex-row">
+            <div class="feed-profile flex-row">
+              <img src="image/feed/19.png" alt="" />
+            </div>
+            <div class="feed-name flex-col">
+              <span>Ahsan Ramadan</span>
+              <span>Mountain<img src="image/feed/21.png" alt="" /></span>
+            </div>
+            <div class="feed-more flex-row">
+              <img src="image/feed/20.png" alt="" />
+            </div>
+          </div>
+          <p>
+            The mountain scenery is so beautiful and calming, it's really an
+            amazing thing.
+          </p>
+          <video autoplay loop muted playsinline>
+            <source
+              src="https://assets.mixkit.co/videos/preview/mixkit-going-down-a-curved-highway-through-a-mountain-range-41576-large.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="feed-like flex-row">
+            <img src="image/feed/23.png" alt="" />
+            <span class="like-count">2.8k</span>
+            <span>100 Shares</span>
+          </div>
+
+          <div class="feed-buttons flex-row">
+            <li class="flex-row">
+              <img src="image/feed/24.png" alt="" />
+              <span>Like</span>
+            </li>
+            <li class="flex-row">
+              <img src="image/feed/25.png" alt="" />
+              <span>Comments</span>
+            </li>
+            <li class="flex-row">
+              <img src="image/feed/26.png" alt="" />
+              <span>Share</span>
+            </li>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- akhir main -->
+    <!-- awal modal -->
+    <div id="menu-modal" class="menu-modal">
+      <span>Menu</span>
+      <div class="content flex-row">
+        <div class="social">
+          <div class="modal-search-box flex-row">
+            <i id="search-icons" class="bi bi-search"></i>
+            <input type="text" />
+          </div>
+          <span>Social</span>
+          <li cla class="flex-row">
+            <img width="36" src="image/modal/1.png" alt="" />
+            <div class="flex-col">
+              <span>Events</span>
+              <span>
+                Organise or find events and other things to do online and nearby
+              </span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <img width="36" src="image/modal/2.png" alt="" />
+            <div class="flex-col">
+              <span>Find freinds</span>
+              <span>Search for freinds or people you may know</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <img width="36" src="image/modal/3.png" alt="" />
+            <div class="flex-col">
+              <span>Groups</span>
+              <span>Connect with people who your interest</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <img width="36" src="image/modal/4.png" alt="" />
+            <div class="flex-col">
+              <span>News feed</span>
+              <span>See relevant post from people and pages that you follow</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <img width="36" src="image/modal/5.png" alt="" />
+            <div class="flex-col">
+              <span>Favourites</span>
+              <span>View post by your Favourites</span>
+            </div>
+          </li>
+        </div>
+        <div class="modal-create">
+          <span style="display: block;">Create</span>
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/6.png" alt="" />
+              <span>Post</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/7.png" alt="" />
+              <span>Story</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/8.png" alt="" />
+              <span>Rooms</span>
+            </div>
+          </li>
+          <hr />
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/9.png" alt="" />
+              <span>Pages</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/10.png" alt="" />
+              <span>Ad</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/11.png" alt="" />
+              <span>Groups</span>
+            </div>
+          </li>
+          <li class="flex-row">
+            <div class="flex-row">
+              <img width="22" src="image/modal/12.png" alt="" />
+              <span>Event</span>
+            </div>
+          </li>
+        </div>
+      </div>
+    </div>
+    <!-- akhir modal -->
   </body>
 </html>
