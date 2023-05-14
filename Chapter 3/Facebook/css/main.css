@@ -1,0 +1,291 @@
+.main-left {
+    width: 360px;
+  }
+  .main {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: #f2f2f2;
+  }
+  .main-left {
+    margin-left: 5px;
+  }
+  .main-left > li {
+    list-style: none;
+    width: 286px;
+    height: 44px;
+    border-radius: 8px;
+    padding-left: 15px;
+    cursor: pointer;
+  }
+  .main-left > li:hover {
+    background-color: lightgray;
+  }
+  .main-left > li > span {
+    margin-right: auto;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  .main-left > li > div {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 28px;
+    height: 28px;
+  }
+  .main-left > li > img {
+    width: 28px;
+  }
+  hr {
+    border: none;
+    border-top: 0.1px solid #d2d2d2;
+  }
+
+  .main-middle {
+    width: 700px;
+    margin-right: auto;
+    margin-left: 14px;
+  }
+  .main-middle > .story {
+    background-color: white;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 0px lightgray;
+  }
+  .main-middle > .create {
+    background-color: white;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 0px lightgray;
+  }
+  .main-middle > .feed {
+    background-color: white;
+    height: 560px;
+    border-radius: 6px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 0px lightgray;
+  }
+  .story-top {
+    height: 60px;
+    border-bottom: 2px solid #f2f2f2;
+  }
+  .story-top > div {
+    width: 200px;
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: gray;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .story-top > div:hover {
+    background-color: #f2f2f2;
+  }
+  .story-top > div:first-child {
+    color: blue;
+    border-bottom: 3px solid blue;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .desc > li {
+    list-style: none;
+  }
+  .story-bottom {
+    padding: 15px;
+  }
+  .profile {
+    width: 115px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 0.5px solid #f2f2f2;
+    box-shadow: 0px 0px 5px 0px lightgray;
+    position: relative;
+  }
+  .profile > span {
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .desc {
+    margin-left: 20px;
+    margin-right: auto;
+    align-items: flex-start;
+  }
+  .desc > li {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+  .desc > li > img {
+    margin-right: 10px;
+  }
+  .plus {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top: 141px;
+  }
+  .profile-img {
+    background:linear-gradient(to bottom, transparent ,gray),url(../image/feed/me1\ \(2\).jpeg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .create {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .create-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.5px solid #f2f2f2;
+    margin-right: auto;
+  }
+  .create-top {
+    border-bottom: 2px solid #d3d3d386;
+    padding-bottom: 10px;
+  }
+  .create-top > input {
+    background-color: #f2f2f2;
+    border-radius: 40px;
+    width: 618px;
+    height: 40px;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
+    text-indent: 10px;
+  }
+  .create-bottom > li {
+    width: 220px;
+    height: 42px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
+  .create-bottom > li:hover {
+    background-color: #f2f2f2;
+  }
+  .create-bottom > li > span {
+    margin-left: 5px;
+    font: 14px;
+    color: grey;
+  }
+
+  .create > button {
+    width: 100%;
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+
+  .create > button:hover {
+    background-color: darkblue;
+  }
+
+  .feed-profile > img {
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid #f2f2f2;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .feed {
+    padding: 15px 15px 5px 15px;
+    box-sizing: border-box;
+  }
+  .feed-top {
+    width: 100%;
+  }
+  .feed-more {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .feed-more:hover {
+    background-color: #f2f2f2e1;
+  }
+  .feed-name {
+    margin-left: 15px;
+    margin-right: auto;
+    align-items: flex-start;
+  }
+  .feed-name > span:first-child {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  .feed-name > span:last-child {
+    font-size: 11px;
+    font-weight: normal;
+    color: grey;
+  }
+  .feed-name > span:last-child > img {
+    margin-left: 5px;
+  }
+  .feed > p {
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .feed > video {
+    width: calc(100% + 30px);
+  }
+  .feed-like {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #d3d3d386;
+    font-size: 13px;
+    color: gray;
+    padding-bottom: 10px;
+  }
+  .like-count {
+    margin-left: 5px;
+    margin-right: auto;
+  }
+  .feed-buttons > li {
+    list-style-type: none;
+    width: 190px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .feed-buttons > li:hover > img {
+    filter: brightness(0.95);
+  }
+  .feed-buttons > li:hover {
+    background-color: #f2f2f2;
+  }
+  .feed-buttons > li > img {
+    width: 24px;
+    height: 24px;
+  }
+  .feed-buttons > li > span {
+    font-size: 14px;
+    margin-left: 5px;
+    color: grey;
+    font-weight: bold;
+  }
